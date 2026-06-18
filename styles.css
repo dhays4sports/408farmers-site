@@ -1,0 +1,57 @@
+:root {
+  --navy: #06182e;
+  --navy-2: #0b2442;
+  --gold: #efbd42;
+  --gold-dark: #b78318;
+  --text: #0a1730;
+  --muted: #737b87;
+  --white: #ffffff;
+  --red: #e11b2f;
+  --blue: #1466c9;
+  --green: #259043;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #0b213d 0%, #f7f8fb 35%, #ffffff 100%);
+  min-height: 100vh;
+}
+.card { max-width: 520px; margin: 0 auto; background: #fff; min-height: 100vh; box-shadow: 0 18px 70px rgba(0,0,0,.18); }
+.hero { position: relative; text-align: center; padding: 30px 22px 22px; overflow: hidden; }
+.gold-bg { position:absolute; inset:0 0 auto 0; height: 235px; background: linear-gradient(180deg, #5d5239 0%, #efc76d 100%); z-index:0; }
+.gold-bg::after { content:""; position:absolute; left:-10%; right:-10%; bottom:-42px; height:80px; background:#fff; transform: rotate(-2.5deg); }
+.avatar { position: relative; z-index:1; width: 132px; height:132px; border-radius:50%; object-fit: cover; border: 8px solid #fff; box-shadow: 0 8px 25px rgba(0,0,0,.2); }
+h1 { position:relative; z-index:1; margin: 86px 0 8px; font-size: 30px; letter-spacing:.2px; }
+.title { position:relative; z-index:1; margin: 0; font-size: 20px; }
+.quick-actions { position:relative; z-index:1; display:flex; justify-content:center; gap:34px; margin-top:44px; }
+.quick-actions a { width:74px; height:74px; border-radius:50%; background:#fff; display:grid; place-items:center; color:#111; text-decoration:none; font-size:31px; box-shadow:0 10px 26px rgba(0,0,0,.12); }
+.content { padding: 0 20px 38px; }
+.primary-btn { display:flex; align-items:center; justify-content:center; gap:12px; margin: 20px auto 36px; width:100%; min-height:70px; background: var(--gold); color:#090909; text-decoration:none; border-radius:7px; font-size:24px; font-weight:700; }
+.eyebrow, .lead, .money-line { text-align:center; color:var(--muted); }
+.eyebrow { font-size:23px; margin: 0 0 34px; }
+.lead { font-size:23px; margin:0 0 34px; }
+.money-line { font-size:22px; line-height:1.35; margin:0 0 36px; }
+.info-card { background:#fff; border-radius:6px; box-shadow:0 16px 45px rgba(20,30,50,.08); overflow:hidden; }
+.info-row { display:flex; align-items:center; gap:22px; padding:19px 24px; text-decoration:none; color:var(--text); border-bottom:1px solid #e9edf2; }
+.info-row:last-child { border-bottom:0; }
+.icon { flex:0 0 54px; height:54px; border-radius:50%; background:#f5f6f8; color:#7f8792; display:grid; place-items:center; font-size:25px; }
+.info-row small { display:block; color:#8a929d; font-size:16px; margin-bottom:3px; }
+.info-row strong { display:block; font-size:20px; line-height:1.25; word-break: break-word; }
+.keywords { margin-top: 30px; }
+.keywords h2 { text-align:center; font-size:20px; margin:0 0 16px; color:var(--navy); }
+.keyword-grid { display:grid; grid-template-columns: repeat(2, 1fr); gap:10px; }
+.keyword-grid a { display:block; padding:13px 8px; text-align:center; border:2px solid currentColor; border-radius:10px; font-weight:900; letter-spacing:.8px; text-decoration:none; background:#fff; }
+.notice { color: var(--red); }
+.auto { color: var(--blue); }
+.review { color: var(--navy); }
+.rental, .umbrella { color: var(--gold-dark); }
+.family { color: var(--green); }
+.services { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; color:var(--muted); margin-top:24px; font-weight:700; text-transform:uppercase; letter-spacing:.8px; font-size:13px; }
+.services span { background:#f5f6f8; padding:8px 10px; border-radius:999px; }
+@media (max-width: 380px) {
+  h1 { font-size: 27px; }
+  .info-row strong { font-size:18px; }
+  .primary-btn { font-size:22px; }
+}
